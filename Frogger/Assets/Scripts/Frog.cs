@@ -3,6 +3,7 @@
 public class Frog : MonoBehaviour
 {
     public Rigidbody2D rb;
+
     // Update is called once per frame
     void Update()
     {
