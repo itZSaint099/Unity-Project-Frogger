@@ -2,7 +2,7 @@
 
 public class CarSpawner : MonoBehaviour
 {
-    public GameObject car;
+    public GameObject cars;
 
     public float SpawnDelay = .3f;
 
@@ -25,6 +25,8 @@ public class CarSpawner : MonoBehaviour
         int randomIndex = Random.Range(0, SpawnPoints.Length);
         Transform SpawnPoint = SpawnPoints[randomIndex];
 
-        Instantiate(car, SpawnPoint.position, SpawnPoint.rotation);
+        var carclone = Instantiate(cars, SpawnPoint.position, SpawnPoint.rotation);
+
+        Destroy(carclone, 2.5f);
     }
 }
